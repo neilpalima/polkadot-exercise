@@ -4,7 +4,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node -r dotenv/config -r tsconfig-paths/register ./dist/index.js",
+    "start:prod": "node -r dotenv/config ./dist/index.js",
     "start:dev": "tsc-watch --onSuccess \"npm run start:prod\" ",
     "build": "rm -rf ./dist/ && ./node_modules/typescript/bin/tsc -p ./tsconfig.json",
     "eslint": "npx eslint src --ext .ts -c ./eslintrc.json",
